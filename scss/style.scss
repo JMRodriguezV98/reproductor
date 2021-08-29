@@ -1,0 +1,143 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+#principal-container{
+    display: flex;
+    width: 100vw;
+    height: 100vh;
+    justify-content: center;
+    align-items: center;
+    background-color: #e75e59;
+    #reproductor-container{
+        display: flex;
+        height: 82%;
+        width: 21%;
+        flex-flow: column;
+        background-color: #352f2f;
+        #containerImg{
+            display: flex;
+            width: 100%;
+            height: 70%;
+            background-image: url("/src/img/fondoAlbum.gif");
+            background-position: center;
+            background-size: cover;
+            background-repeat: no-repeat;
+            #headerRepro{
+                display: flex;
+                width: 100%;
+                height: 50px;
+                align-items: center;
+                justify-content: space-between;
+                padding: 40px;
+                .Layer_1{
+                    fill: rgb(175, 170, 170);
+                    &:hover{
+                        cursor: pointer;
+                        fill: white;
+                    }
+                }
+            }
+        }
+        #containerControlls{
+            display: flex;
+            width: 100%;
+            height: 50%;
+            flex-flow: column;
+            .invisible{
+                display: none;
+            }
+            #panelInfo{
+                display: flex;
+                width: 100%;
+                height: 50%;
+                justify-content: center;
+                align-items: center;
+                flex-flow: column;
+                #title{
+                    font-weight: bolder;
+                    color: white;
+                }
+                #cancionInfo{
+                    color: rgb(117, 116, 116);
+                }
+            }
+            #controlPanel{
+                display: flex;
+                width: 100%;
+                height: 30%;
+                align-items: center;
+                justify-content: space-evenly;
+                .playerAudio{
+                    position: fixed;
+                    visibility: hidden;
+                }
+                .controller{
+                    fill: white;
+                    &:hover{
+                        cursor: pointer;
+                        transform: scale(1.5);
+                    }
+                }
+                .back{
+                    transform: scaleX(-1);
+                    &:hover{
+                        transform: scale(1.5) scaleX(-1);
+                    }
+                }
+            }
+            #footerPanel{
+                display: flex;
+                width: 100%;
+                height: 20%;
+                align-items: center;
+                justify-content: space-around;
+                padding: 20px;
+                margin-bottom: 10px;
+                .replay{
+                    transform: rotate(180deg) scaleX(-1);
+                }
+                .iconF{
+                    &:hover{
+                        cursor: pointer;
+                        transform: scale(1.2);
+                    }
+                }
+            }
+        }
+    }
+}
+
+.invisible{
+    display: none;
+}
+
+@media (max-width: 1438px) {
+    #principal-container{
+        #reproductor-container{
+            width: 30%;
+            height: 82%;
+        }
+    }
+}
+
+@media (max-width: 900px) {
+    #principal-container{
+        #reproductor-container{
+            width: 100%;
+            height: 100%;
+        }
+    }
+}
+
+@media (max-width: 375px) {
+    #principal-container{
+        #reproductor-container{
+            width: 100%;
+            height: 100%;
+        }
+    }
+}

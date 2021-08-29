@@ -1,0 +1,135 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+#principal-container {
+  display: flex;
+  width: 100vw;
+  height: 100vh;
+  justify-content: center;
+  align-items: center;
+  background-color: #e75e59;
+}
+#principal-container #reproductor-container {
+  display: flex;
+  height: 82%;
+  width: 21%;
+  flex-flow: column;
+  background-color: #352f2f;
+}
+#principal-container #reproductor-container #containerImg {
+  display: flex;
+  width: 100%;
+  height: 70%;
+  background-image: url("/src/img/fondoAlbum.gif");
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+#principal-container #reproductor-container #containerImg #headerRepro {
+  display: flex;
+  width: 100%;
+  height: 50px;
+  align-items: center;
+  justify-content: space-between;
+  padding: 40px;
+}
+#principal-container #reproductor-container #containerImg #headerRepro .Layer_1 {
+  fill: #afaaaa;
+}
+#principal-container #reproductor-container #containerImg #headerRepro .Layer_1:hover {
+  cursor: pointer;
+  fill: white;
+}
+#principal-container #reproductor-container #containerControlls {
+  display: flex;
+  width: 100%;
+  height: 50%;
+  flex-flow: column;
+}
+#principal-container #reproductor-container #containerControlls .invisible {
+  display: none;
+}
+#principal-container #reproductor-container #containerControlls #panelInfo {
+  display: flex;
+  width: 100%;
+  height: 50%;
+  justify-content: center;
+  align-items: center;
+  flex-flow: column;
+}
+#principal-container #reproductor-container #containerControlls #panelInfo #title {
+  font-weight: bolder;
+  color: white;
+}
+#principal-container #reproductor-container #containerControlls #panelInfo #cancionInfo {
+  color: #757474;
+}
+#principal-container #reproductor-container #containerControlls #controlPanel {
+  display: flex;
+  width: 100%;
+  height: 30%;
+  align-items: center;
+  justify-content: space-evenly;
+}
+#principal-container #reproductor-container #containerControlls #controlPanel .playerAudio {
+  position: fixed;
+  visibility: hidden;
+}
+#principal-container #reproductor-container #containerControlls #controlPanel .controller {
+  fill: white;
+}
+#principal-container #reproductor-container #containerControlls #controlPanel .controller:hover {
+  cursor: pointer;
+  transform: scale(1.5);
+}
+#principal-container #reproductor-container #containerControlls #controlPanel .back {
+  transform: scaleX(-1);
+}
+#principal-container #reproductor-container #containerControlls #controlPanel .back:hover {
+  transform: scale(1.5) scaleX(-1);
+}
+#principal-container #reproductor-container #containerControlls #footerPanel {
+  display: flex;
+  width: 100%;
+  height: 20%;
+  align-items: center;
+  justify-content: space-around;
+  padding: 20px;
+  margin-bottom: 10px;
+}
+#principal-container #reproductor-container #containerControlls #footerPanel .replay {
+  transform: rotate(180deg) scaleX(-1);
+}
+#principal-container #reproductor-container #containerControlls #footerPanel .iconF:hover {
+  cursor: pointer;
+  transform: scale(1.2);
+}
+
+.invisible {
+  display: none;
+}
+
+@media (max-width: 1438px) {
+  #principal-container #reproductor-container {
+    width: 30%;
+    height: 82%;
+  }
+}
+@media (max-width: 900px) {
+  #principal-container #reproductor-container {
+    width: 100%;
+    height: 100%;
+  }
+}
+@media (max-width: 375px) {
+  #principal-container #reproductor-container {
+    width: 100%;
+    height: 100%;
+  }
+}
+
+/*# sourceMappingURL=style.css.map */
